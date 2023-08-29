@@ -1,0 +1,11 @@
+  version: '3'
+  tasks:
+    test:
+      cmds:
+        - ./gradlew test
+    run:
+      cmds:
+        - ./gradlew bootRun
+    build-image:
+      cmds:
+        - ./gradlew bootBuildImage
