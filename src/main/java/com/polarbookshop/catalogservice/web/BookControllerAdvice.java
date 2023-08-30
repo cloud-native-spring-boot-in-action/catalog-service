@@ -16,8 +16,8 @@ import java.util.Map;
 public class BookControllerAdvice {
 
     @ExceptionHandler(BookNotFoundException.class)
-    @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
-    String bookNotFoundHandler(BookAlreadyExistsException ex) {
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    String bookNotFoundHandler(BookNotFoundException ex) {
         return ex.getMessage();
     }
 
