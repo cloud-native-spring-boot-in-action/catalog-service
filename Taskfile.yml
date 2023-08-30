@@ -9,3 +9,13 @@
     build-image:
       cmds:
         - ./gradlew bootBuildImage
+
+    #Compiles the code and packages it
+    build-app:
+      cmds:
+        - ./gradlew bootJar
+
+    # Build and test the app
+    build:
+      cmds:
+        - ./gradlew build
