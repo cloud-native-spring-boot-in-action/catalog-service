@@ -21,6 +21,10 @@ configurations {
 	}
 }
 
+ext {
+	set('testcontainersVersion', "1.19.0")
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
@@ -31,12 +35,14 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webflux'
+	testImplementation 'org.testcontainers:postgresql'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 }
 
 dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:2022.0.4"
+		mavenBom "org.testcontainers:testcontainers-bom:${testcontainersVersion}"
 	}
 }
 

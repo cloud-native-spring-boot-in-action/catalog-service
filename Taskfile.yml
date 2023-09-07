@@ -14,7 +14,7 @@
     #Compiles the code and packages it
     build-app:
       cmds:
-        - ./gradlew bootJar
+        - ./gradlew clean bootJar
 
     # Build and test the app
     build:
