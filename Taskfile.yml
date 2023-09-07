@@ -1,4 +1,5 @@
   version: '3'
+  dotenv: ['.env']
   tasks:
     test:
       cmds:
@@ -19,3 +20,7 @@
     build:
       cmds:
         - ./gradlew build
+
+    create-db:
+      cmds:
+        - docker run -d --name polar-postgres -e POSTGRES_USER=${POSTGRES_USER} -e POSTGRES_PASSWORD=${POSTGRES_PASSWORD} -e POSTGRES_DB=${POSTGRES_DB} -p 5432:5432 postgres:14.4
