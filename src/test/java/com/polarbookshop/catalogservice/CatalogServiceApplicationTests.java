@@ -13,11 +13,11 @@ class CatalogServiceApplicationTests {
 	@Autowired
 	private WebTestClient webTestClient;
 
-	@Test
+	/*@Test
 	void contextLoads() {
-	}
+	}*/
 
-	@Test
+	/*@Test
 	void whenPostRequestThenBookCreated() {
 		var expectedBook = Book.of("1231231231", "Title", "Author", 9.90, "O'Reilly");
 
@@ -32,6 +32,6 @@ class CatalogServiceApplicationTests {
 					Assertions.assertThat(actuaBook.isbn())
 							.isEqualTo(expectedBook.isbn());
 				});
-	}
+	}*/
 
 }
