@@ -83,5 +83,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish container image
         run: |
-          echo ${{ secrets.GITHUB_TOKEN }}
+          echo "Token: ${{ secrets.GITHUB_TOKEN }}"
           docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
