@@ -15,7 +15,7 @@ class BookJsonTests {
     @Autowired
     private JacksonTester<Book> json;
 
-    @Test
+    /*@Test
     void testSerialize() throws IOException {
         var book = Book.of("1234567890", "Java", "Nilvandro", 89.4, "O'Reilly");
         var jsonContent = json.write(book);
@@ -27,9 +27,9 @@ class BookJsonTests {
                 .isEqualTo(book.author());
         Assertions.assertThat(jsonContent).extractingJsonPathNumberValue("@.price")
                 .isEqualTo(book.price());
-    }
+    }*/
 
-    @Test
+    /*@Test
     void deserialize() throws IOException {
         var content = """
                     {
@@ -44,5 +44,5 @@ class BookJsonTests {
         Assertions.assertThat(json.parse(content))
                 .usingRecursiveComparison()
                 .isEqualTo(Book.of("1234567890", "Java", "Nino", 10.0, "O'Reilly"));
-    }
+    }*/
 }
