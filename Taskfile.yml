@@ -9,7 +9,8 @@
         - ./gradlew bootRun
     build-image:
       cmds:
-        - ./gradlew bootBuildImage
+        - ./gradlew clean bootJar
+        - ./gradlew bootBuildImage --imageName=nmuianga/catalog-service:latest
 
     #Compiles the code and packages it
     build-app:
